@@ -26,7 +26,6 @@ function AlreadyBoughtController(ShoppingListCheckOffService) {
   var list = this;
   list.AlreadyBoughtItems = ShoppingListCheckOffService.getAlreadyBoughtItems();
 
-  // list.errorMessage = false;
 }
 
 function ShoppingListCheckOffService() {
@@ -60,7 +59,7 @@ function ShoppingListCheckOffService() {
     };
     AlreadyBoughtItems.push(item);
     this.removeItemFromToBuy(itemIndex);
-    // ToBuyItems.splice(itemIndex, 1);
+
     if(ToBuyItems.length == 0)
       throw new Error("Everything is bought!");
   };
